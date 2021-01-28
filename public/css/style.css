@@ -1,0 +1,10 @@
+@charset "UTF-8";
+/*Intégrer les polices: Logo et titres: Shrikhand - Texte: Roboto*/
+/*Penser à déplacer les typos dans _base -> typo - lien @import*/
+/*Les couleurs seront à déplacer dans utils -> _variables - penser à rajouter le lien @import*/
+/*Mise en forme des boutons et déplacer dans componenets -> _buttons - lien @import*/
+/*taille image*/
+img {
+  width: 330px; }
+
+/*# sourceMappingURL=style.css.map */

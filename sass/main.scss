@@ -6,5 +6,112 @@
 $color-primary: #9356DC;
 $color-secondary: #FF79DA;
 $color-tertiaire: #99E2D0;
+$color-fond: #eaeaea;
 
 /*Mise en forme des boutons et déplacer dans componenets -> _buttons - lien @import*/
+
+
+body {
+    margin: 0;
+
+}
+/*taille image*/
+img {
+    width: 330px;
+}
+.container {
+    height: 62px;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &__logo {
+        width: 160px;
+    }
+    &--grey {
+        background-color: $color-fond;
+        border-top: 1px solid #cfcfcf;
+    }
+    &__icone {
+        padding-right: 17px;
+    }
+}
+
+$cd-btn-start: rgba(1, 28, 55, 0);
+$cd-btn-end: rgba(1, 28, 55, 1);
+
+.btn {
+    border-radius: 20px * 0.5;
+    width: 28vw;
+    background-color: red;
+    position: relative;
+    color: white;
+    z-index: 1;
+    &:hover {
+        &::after {
+            opacity: 1;
+        }
+    }
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        background-color: pink;
+        opacity: 0;
+        z-index: -1;
+        transition: opacity 250ms;
+        
+    }
+}
+
+
+.ball {
+    width: 20px;
+    height: 20px;
+    border-radius: 20px * 0.5;
+    transform: scale(0.1);
+    transition: transform 400ms;
+    background-color: pink;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 150px;
+    justify-content: space-around;
+    .btn {
+        width: 170px;
+        height: 20px;
+        border-radius: 20px * 0.5;
+        padding: 20px;
+        background-color: red;
+        color: white;
+        &:active {
+        &+ .progress {
+            & > .progress__bar {
+                transform: scaleX(1);
+            }
+        }
+        }
+    }
+    .progress {
+        border: 3px solid red;
+        margin-top: 10px;
+        width: 60vw;
+        height: 40px;
+        border-radius: 60px * 0.5;
+        &__bar {
+            width:59.5vw;
+            height: 30px;
+            border-radius: 60px * 0.5;
+            background-color: green;
+            padding: 5px;
+            transform: scaleX(0);
+            transition: transform 1000ms cubic-bezier(.32, 0, .07, 1);
+            transform-origin: left;
+        }
+    }
+}

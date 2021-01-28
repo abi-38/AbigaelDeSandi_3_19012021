@@ -1,25 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="public/css/style.css">
+    <link rel="stylesheet" href=".public/css/style.css">
     <link href="public/fontawesome-free-5.15.1-web/css/all.css" rel="stylesheet">
 </head>
 <body>
     <header>
-        <div>
-            <img src="public/img/ohmyfood.png" alt="logo">
+        <div class="container">
+            <img class="container__logo" src="public/img/ohmyfood.png" alt="logo">
         </div>
-        <div>
-            <span><i class="fas fa-map-marker-alt"></i></span>
-        </div>
-        <div>
+        <div class="container container--grey">
+            <span class="container__icone"><i class="fas fa-map-marker-alt"></i></span>
             <p>Paris, Belleville</p>
+        </div>
+        <div>
             <h1>Réserver le menu qui vous convient</h1>
             <p>Découvrez des restaurants d'excéption, sélectionnés par nos soins.</p>
-            <button href="#">Explorez nos restaurants</button>
+            <button class="btn" href="#">Explorez nos restaurants</button>
         </div>
     </header>
     <section>
@@ -42,53 +42,53 @@
     </section>
     <section>
         <h2>Restaurants</h2>
-        <a href="#">
-            <div>
+        <a href="laPaletteDuGout.html">
+            <figure>
                 <img src="public/img/menu1.jpg" alt="photo-menu1">
-            </div>
-            <div>
+            </figure>
+            <figcaption>
                 <div>
                     <h3>La palette du goût</h3>
                     <p>Ménilmontant</p>
                 </div>
                 <span><i class="far fa-heart"></i></span>
-            </div>
+            </figcaption>
         </a>
-        <a href="#">
-            <div>
+        <a href="laNoteEnchantee.html">
+            <figure>
                 <img src="public/img/menu2.jpg" alt="photo-menu2">
-            </div>
-            <div>
+            </figure>
+            <figcaption>
                 <div>
                     <h3>La note enchantée</h3>
                     <p>Charonne</p>
                 </div>
                 <span><i class="far fa-heart"></i></span>
-            </div>
+            </figcaption>
         </a>
-        <a href="#">
-            <div>
+        <a href="aLaFrancaise.html">
+            <figure>
                 <img src="public/img/menu3.jpg" alt="photo-menu3">
-            </div>
-            <div>
+            </figure>
+            <figcaption>
                 <div>
                     <h3>À la Française</h3>
                     <p>Cité rouge</p>
                 </div>
                 <span><i class="far fa-heart"></i></span>
-            </div>
+            </figcaption>
         </a>
-        <a href="#">
-            <div>
+        <a href="leDeliceDesSens.html">
+            <figure>
                 <img src="public/img/menu4.jpg" alt="photo-menu4">
-            </div>
-            <div>
+            </figure>
+            <figcaption>
                 <div>
                     <h3>Le délice des sens</h3>
                     <p>Folie-Méricourt</p>
                 </div>
                 <span><i class="far fa-heart"></i></span>
-            </div>
+            </figcaption>
         </a>
     </section>
     <footer>
@@ -102,7 +102,7 @@
             <a href="#">Devenir partenaires</a>
         </div>
         <a href="#">Mentions légales</a>
-        <a href="#">Contact</a>
+        <a href="mailto">Contact</a>
     </footer>
 </body>
 </html>
