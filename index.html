@@ -6,98 +6,99 @@
     <title>Document</title>
     <link rel="stylesheet" href=".public/css/style.css">
     <link href="public/fontawesome-free-5.15.1-web/css/all.css" rel="stylesheet">
-</head>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700;900&family=Shrikhand&display=swap" rel="stylesheet"> </head>
 <body>
     <header>
-        <div class="container">
-            <img class="container__logo" src="public/img/ohmyfood.png" alt="logo">
+        <div class="container-first container-first--shadow">
+            <img class="container-first__logo" src="public/img/ohmyfood.png" alt="logo">
         </div>
-        <div class="container container--grey">
-            <span class="container__icone"><i class="fas fa-map-marker-alt"></i></span>
+        <div class="container-first container-first--grey">
+            <span class="container-first__icone"><i class="fas fa-map-marker-alt"></i></span>
             <p>Paris, Belleville</p>
         </div>
-        <div>
+        <div class="container-presentation">
             <h1>Réserver le menu qui vous convient</h1>
-            <p>Découvrez des restaurants d'excéption, sélectionnés par nos soins.</p>
+            <h3>Découvrez des restaurants d'excéption, sélectionnés par nos soins.</h3>
             <button class="btn" href="#">Explorez nos restaurants</button>
         </div>
     </header>
-    <section>
+    <section class="section-fonctionnement">
         <h2>Fonctionnement</h2>
-        <div>
-            <span><p>1</p></span>
-            <span><i class="fas fa-mobile-alt"></i></span>
-            <button href="#">Choisissez un restaurant</button>
+        <div class="container-fonctionnement" href="#">
+            <span class="container-fonctionnement__number">1</span>
+            <span class="container-fonctionnement__icone"><i class="fas fa-mobile-alt"></i></span>
+            <p class="container-fonctionnement__p">Choisissez un restaurant</p>
         </div>
-        <div>
-            <span><p>2</p></span>
-            <span><i class="fas fa-list-ul"></i></span>
-            <button href="#">Composez votre menu</button>
+        <div class="container-fonctionnement" href="#">
+            <span class="container-fonctionnement__number">2</span>
+            <span class="container-fonctionnement__icone"><i class="fas fa-list-ul"></i></span>
+            <p class="container-fonctionnement__p">Composez votre menu</p>
         </div>
-        <div>
-            <span><p>3</p></span>
-            <span><i class="fas fa-store"></i></span>
-            <button href="#">Dégustez au restaurant</button>
+        <div class="container-fonctionnement" href="#">
+            <span class="container-fonctionnement__number">3</span>
+            <span class="container-fonctionnement__icone"><i class="fas fa-store"></i></span>
+            <p class="container-fonctionnement__p">Dégustez au restaurant</p>
         </div>
     </section>
-    <section>
+    <section class="section-restaurant">
         <h2>Restaurants</h2>
-        <a href="laPaletteDuGout.html">
+        <a class="section-restaurant__vignette" href="laPaletteDuGout.html">
             <figure>
                 <img src="public/img/menu1.jpg" alt="photo-menu1">
             </figure>
             <figcaption>
                 <div>
-                    <h3>La palette du goût</h3>
+                    <h4>La palette du goût</h4>
                     <p>Ménilmontant</p>
                 </div>
-                <span><i class="far fa-heart"></i></span>
+                <span class="heart"><i class="far fa-heart"></i></span>
             </figcaption>
         </a>
-        <a href="laNoteEnchantee.html">
+        <a class="section-restaurant__vignette" href="laNoteEnchantee.html">
             <figure>
                 <img src="public/img/menu2.jpg" alt="photo-menu2">
             </figure>
             <figcaption>
                 <div>
-                    <h3>La note enchantée</h3>
+                    <h4>La note enchantée</h4>
                     <p>Charonne</p>
                 </div>
-                <span><i class="far fa-heart"></i></span>
+                <span class="heart"><i class="far fa-heart"></i></span>
             </figcaption>
         </a>
-        <a href="aLaFrancaise.html">
+        <a class="section-restaurant__vignette" href="aLaFrancaise.html">
             <figure>
                 <img src="public/img/menu3.jpg" alt="photo-menu3">
             </figure>
             <figcaption>
                 <div>
-                    <h3>À la Française</h3>
+                    <h4>À la Française</h4>
                     <p>Cité rouge</p>
                 </div>
-                <span><i class="far fa-heart"></i></span>
+                <span  class="heart"><i class="far fa-heart"></i></span>
             </figcaption>
         </a>
-        <a href="leDeliceDesSens.html">
+        <a class="section-restaurant__vignette" href="leDeliceDesSens.html">
             <figure>
                 <img src="public/img/menu4.jpg" alt="photo-menu4">
             </figure>
             <figcaption>
                 <div>
-                    <h3>Le délice des sens</h3>
+                    <h4>Le délice des sens</h4>
                     <p>Folie-Méricourt</p>
                 </div>
-                <span><i class="far fa-heart"></i></span>
+                <span class="heart"><i class="far fa-heart"></i></span>
             </figcaption>
         </a>
     </section>
-    <footer>
-        <img src="public/img/ohmyfood.png" alt="logo">
-        <div>
+    <footer class="footer">
+        <h5>ohmyfood</h5>
+        <div class="footer-premiereLigne">
             <span><i class="fas fa-utensils"></i></span>
             <a href="#">Proposez un restaurant</a>
         </div>
-        <div>
+        <div class="footer-deuxiemeLigne">
             <span><i class="fas fa-hands-helping"></i></span>
             <a href="#">Devenir partenaires</a>
         </div>
