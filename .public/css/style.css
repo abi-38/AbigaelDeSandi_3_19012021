@@ -1,3 +1,350 @@
+body {
+  margin: 0;
+  background-color: #eaeaea; }
 
+body {
+  font-family: 'Roboto', sans-serif; }
+
+/*Typo accueil*/
+.h1-accueil {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 900;
+  font-size: 1.5rem; }
+
+.h2-accueil {
+  font-weight: 700;
+  font-size: 1.5rem; }
+
+.h3-accueil {
+  font-size: 1.125rem;
+  font-weight: 100; }
+
+.h4-accueil {
+  font-size: 1.125rem;
+  font-weight: 700; }
+
+.p-accueil {
+  font-size: 1.063rem;
+  font-weight: 300; }
+
+.choix-accueil {
+  font-weight: 700;
+  font-size: 1rem; }
+
+.geolocalisation-accueil {
+  font-size: 1rem;
+  font-weight: 400; }
+
+/*Typo footer*/
+h5 {
+  font-family: 'Shrikhand', cursive;
+  font-size: 1.125rem;
+  margin: 0; }
+
+/*Typo pages menus*/
+h1 {
+  font-family: 'Shrikhand', cursive;
+  font-size: 1.6rem; }
+
+.h2-menus {
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 1rem;
+  position: relative;
+  margin-bottom: 25px; }
+  .h2-menus::after {
+    content: "";
+    position: absolute;
+    height: 3px;
+    width: 40px;
+    background-color: #99E2D0;
+    left: 0;
+    top: 23px; }
+
+h3 {
+  font-weight: 700;
+  font-size: 1.125rem; }
+
+p {
+  font-weight: 100;
+  font-size: 0.85rem; }
+
+strong {
+  font-weight: 700;
+  font-size: 0.938rem; }
+
+.btn {
+  border-radius: 23px;
+  border: none;
+  width: 213px;
+  height: 49px;
+  background: linear-gradient(to bottom right, #FF79DA 0%, #9256dc 100%);
+  color: white;
+  position: relative;
+  z-index: 1; }
+  .btn--space-menus {
+    margin-bottom: 65px; }
+  .btn:hover::after {
+    opacity: 1; }
+  .btn::after {
+    content: "";
+    border-radius: 23px;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    transition: opacity 250ms;
+    background-color: #FF79DA;
+    opacity: 0;
+    position: absolute;
+    z-index: -1; }
+
+.footer {
+  height: 195px;
+  background-color: #353535;
+  padding: 15px 20px 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  color: white; }
+  .footer h5 {
+    padding-bottom: 30px; }
+  .footer > div {
+    padding-bottom: 15px; }
+    .footer > div > a {
+      color: white;
+      text-decoration: none;
+      padding-left: 15px;
+      font-size: 1rem; }
+  .footer > a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    padding-bottom: 15px; }
+
+.container-first {
+  height: 62px;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /*pages des menus*/ }
+  .container-first--shadow {
+    box-shadow: 0px 0px 5px #b4b4b4;
+    background-color: white;
+    z-index: -1; }
+  .container-first__logo {
+    width: 160px;
+    z-index: 1; }
+  .container-first__icone {
+    padding-right: 17px; }
+  .container-first--bg-white {
+    background-color: white; }
+  .container-first > a {
+    position: relative; }
+    .container-first > a > i {
+      position: absolute;
+      top: -9px;
+      right: 210px;
+      color: #353535; }
+
+figure {
+  width: 100vw;
+  height: 250px;
+  overflow: hidden;
+  margin: 0; }
+  figure > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; }
+
+.container-presentation {
+  height: 284px;
+  background-color: #f6f6f6;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 5px; }
+  .container-presentation h1 {
+    padding-left: 25px;
+    padding-right: 25px; }
+
+.section-fonctionnement {
+  padding: 50px 18px 50px 30px;
+  background-color: white; }
+  .section-fonctionnement .container-fonctionnement {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    width: 86vw;
+    height: 73px;
+    background-color: #f6f6f6;
+    border-radius: 21px;
+    box-shadow: 0px 5px 10px #b4b4b4;
+    margin-bottom: 20px;
+    position: relative; }
+    .section-fonctionnement .container-fonctionnement__number {
+      width: 24px;
+      height: 20px;
+      border-radius: 24px;
+      background-color: #9356DC;
+      position: absolute;
+      top: 25px;
+      left: -13px;
+      font-size: 0.875rem;
+      font-weight: 400;
+      color: white;
+      display: table-cell;
+      vertical-align: middle;
+      padding-top: 4px; }
+    .section-fonctionnement .container-fonctionnement__icone {
+      padding-left: 38px;
+      color: #7e7e7e; }
+    .section-fonctionnement .container-fonctionnement__p {
+      padding-left: 20px; }
+
+.section-restaurant {
+  padding: 50px 20px 50px 20px;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around; }
+  .section-restaurant > h2 {
+    margin-top: 0;
+    text-align: left;
+    width: 90vw; }
+  .section-restaurant__vignette {
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 300px;
+    height: 250px;
+    background-color: white;
+    border-radius: 13px;
+    margin-bottom: 10px; }
+    .section-restaurant__vignette > figure {
+      display: block;
+      width: 300px;
+      height: 174px;
+      overflow: hidden;
+      margin: 0;
+      border-radius: 13px 13px 0px 0px;
+      position: relative;
+      z-index: 1; }
+      .section-restaurant__vignette > figure > .nouveaute {
+        background-color: #99E2D0;
+        color: #008766;
+        font-size: 0.875rem;
+        font-weight: 700;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 90px;
+        height: 29px;
+        border-radius: 3px;
+        position: absolute;
+        top: 17px;
+        right: 12px;
+        z-index: 2; }
+      .section-restaurant__vignette > figure > img {
+        width: 110%;
+        height: 125%;
+        object-fit: cover;
+        position: absolute;
+        top: -39px; }
+    .section-restaurant__vignette > figcaption {
+      display: flex;
+      justify-content: left;
+      align-items: center;
+      padding-left: 15px;
+      position: relative; }
+      .section-restaurant__vignette > figcaption > div {
+        color: black; }
+        .section-restaurant__vignette > figcaption > div > h4 {
+          margin-bottom: 0px; }
+        .section-restaurant__vignette > figcaption > div > p {
+          margin-top: 7px; }
+      .section-restaurant__vignette > figcaption .heart {
+        color: black;
+        position: absolute;
+        top: 30px;
+        right: 16px;
+        font-size: 1.7rem; }
+    .section-restaurant__vignette img {
+      width: 330px; }
+
+@media (min-width: 1024px) {
+  /*body {
+      max-width: 1440px;
+      margin: auto;
+  }*/
+  .section-fonctionnement {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; }
+    .section-fonctionnement > h2.h2-accueil {
+      width: 90vw; }
+    .section-fonctionnement > div.container-fonctionnement {
+      width: 29vw; }
+
+  .section-restaurant__vignette {
+    width: 45vw; }
+    .section-restaurant__vignette > figure {
+      width: 45vw; } }
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  main .div-titre {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90vw;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 40px 40px 0px 0px;
+    position: relative;
+    top: -47px;
+    background-color: #eaeaea; }
+    main .div-titre > span > .far.fa-heart {
+      font-size: 1.6rem;
+      padding-right: 4px; }
+  main section {
+    margin-top: -20px;
+    margin-bottom: 20px; }
+    main section .vignette {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      background-color: white;
+      width: 84vw;
+      height: auto;
+      border-radius: 16px;
+      padding: 10px;
+      margin-bottom: 15px; }
+      main section .vignette > h3 {
+        width: 100vw;
+        margin: 0; }
+      main section .vignette > div {
+        display: flex;
+        justify-content: space-between;
+        width: 100vw; }
+        main section .vignette > div > p {
+          margin: 0; }
+
+@media (min-width: 1024px) {
+  main {
+    display: flex;
+    flex-direction: row !important;
+    justify-content: space-around;
+    flex-wrap: wrap; }
+    main > section > div.vignette {
+      width: 30vw; }
+    main > .btn.btn--space-menus {
+      margin-left: 30vh;
+      margin-right: 30vh; } }
 
 /*# sourceMappingURL=style.css.map */

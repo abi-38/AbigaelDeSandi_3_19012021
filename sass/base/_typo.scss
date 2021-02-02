@@ -1,0 +1,75 @@
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+/*Typo accueil*/
+.h1-accueil {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
+    font-size: 1.5rem;
+}
+.h2-accueil {
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+.h3-accueil {
+    font-size: 1.125rem;
+    font-weight: 100;
+}
+.h4-accueil {
+    font-size: 1.125rem;
+    font-weight: 700;
+}
+.p-accueil {
+    font-size: 1.063rem;
+    font-weight: 300;
+}
+.choix-accueil {
+    font-weight: 700;
+    font-size: 1rem;
+}
+.geolocalisation-accueil {
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+/*Typo footer*/
+h5 {
+    font-family: 'Shrikhand', cursive;
+    font-size: 1.125rem;
+    margin: 0;
+}
+
+/*Typo pages menus*/
+h1 {
+    font-family: 'Shrikhand', cursive;
+    font-size: 1.6rem;
+}
+.h2-menus {
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 1rem;
+    position: relative;
+    margin-bottom: 25px;
+    &::after {
+        content: "";
+        position: absolute;
+        height: 3px;
+        width: 40px;
+        background-color: $color-tertiaire;
+        left: 0;
+        top: 23px;
+    }
+}
+h3 {
+    font-weight: 700;
+    font-size: 1.125rem;
+}
+p {
+    font-weight: 100;
+    font-size: 0.85rem;
+}
+strong {
+    font-weight: 700;
+    font-size: 0.938rem;
+}
