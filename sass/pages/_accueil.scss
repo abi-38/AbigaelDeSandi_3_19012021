@@ -1,0 +1,159 @@
+.container-presentation {
+    height: 284px;
+    background-color: $color-fond-secondary;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 5px;
+    h1 {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+}
+
+.section-fonctionnement {
+    padding: 50px 18px 50px 30px;
+    background-color: white;
+    .container-fonctionnement {
+        display: flex;
+        align-items: center;
+        text-align: center;
+        width: 86vw;
+        height: 73px;
+        background-color: $color-fond-secondary;
+        border-radius: 21px;
+        box-shadow: 0px 5px 10px $color-shadow;
+        margin-bottom: 20px;
+        position: relative;
+        &__number {
+            width: 24px;
+            height: 20px;
+            border-radius: 24px;
+            background-color: $color-primary;
+            position: absolute;
+            top: 25px;
+            left: -13px;
+            font-size: 0.875rem;
+            font-weight: 400;
+            color: white;
+            display: table-cell;
+            vertical-align: middle;
+            padding-top: 4px;
+        }
+        &__icone {
+            padding-left: 38px;
+            color: $color-icone;
+        }
+        &__p {
+            padding-left: 20px;
+        }
+    }
+}
+.section-restaurant {
+    padding: 50px 20px 50px 20px;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    & > h2 {
+        margin-top: 0;
+        text-align: left;
+        width: 90vw;
+    }
+    &__vignette {
+        text-decoration: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 300px;
+        height: 250px;
+        background-color: white;
+        border-radius: 13px;
+        margin-bottom: 10px;
+        & > figure {
+            display: block;
+            width: 300px;
+            height: 174px;
+            overflow: hidden;
+            margin: 0;
+            border-radius: 13px 13px 0px 0px;
+            position: relative;
+            z-index: 1;
+            & > .nouveaute {
+                background-color: $color-tertiaire;
+                color: $color-nouveaute;
+                font-size: 0.875rem;
+                font-weight: 700;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 90px;
+                height: 29px;
+                border-radius: 3px;
+                position: absolute;
+                top: 17px;
+                right: 12px;
+                z-index: 2;
+            }
+            & > img {
+                width: 110%;
+                height: 125%;
+                object-fit: cover;
+                position: absolute;
+                top: -39px;
+            }
+        }
+        & > figcaption {
+            display: flex;
+            justify-content: left;
+            align-items: center;
+            padding-left: 15px;
+            position: relative;
+            & > div {
+                color: black;
+                & > h4 {
+                    margin-bottom: 0px;
+                }
+                & > p {
+                    margin-top: 7px;
+                }
+            }
+            .heart {
+                color: black;
+                position: absolute;
+                top: 30px;
+                right: 16px;
+                font-size: 1.7rem;
+            }
+        }
+        img {
+            width: 330px;
+        }
+    }
+}
+
+@media (min-width: 1024px) {
+    /*body {
+        max-width: 1440px;
+        margin: auto;
+    }*/
+    .section-fonctionnement {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        & > h2.h2-accueil {
+            width: 90vw;
+        }
+        & > div.container-fonctionnement {
+            width: 29vw;
+        }
+    }
+    .section-restaurant__vignette {
+        width: 45vw;
+        & > figure {
+            width: 45vw;
+        }
+    }
+}

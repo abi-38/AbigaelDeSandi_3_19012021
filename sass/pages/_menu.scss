@@ -1,0 +1,65 @@
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .div-titre {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 90vw;
+        padding-left: 15px;
+        padding-right: 15px;
+        border-radius: 40px 40px 0px 0px;
+        position: relative;
+        top: -47px;
+        background-color: $color-fond;
+        & > span > .far.fa-heart {
+            font-size: 1.6rem;
+            padding-right: 4px;
+        }
+    }
+    section {
+        margin-top: -20px;
+        margin-bottom: 20px;
+        
+        .vignette {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            background-color: white;
+            width: 84vw;
+            height: auto;
+            border-radius: 16px;
+            padding: 10px;
+            margin-bottom: 15px;
+            & > h3 {
+                width: 100vw;
+                margin: 0;
+            }
+            & > div {
+                display: flex;
+                justify-content: space-between;
+                width: 100vw;
+                & > p {
+                    margin: 0;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 1024px) {
+    main {
+        display: flex;
+        flex-direction: row !important;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        & > section > div.vignette {
+            width: 30vw;
+        }
+        & > .btn.btn--space-menus {
+            margin-left: 30vh;
+            margin-right: 30vh;
+        }
+    }
+}
