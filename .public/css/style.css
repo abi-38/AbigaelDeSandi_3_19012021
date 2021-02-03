@@ -413,6 +413,13 @@ main {
     main > .btn.btn--space-menus {
       margin-left: 30vh;
       margin-right: 30vh; } }
+@media (min-width: 1900px) {
+  main {
+    max-width: 1400px;
+    margin: auto; }
+    main > .btn.btn--space-menus {
+      margin-left: 40vh;
+      margin-right: 40vh; } }
 @keyframes animation {
   0% {
     opacity: 0;
