@@ -173,7 +173,8 @@ figure {
 
 .section-fonctionnement {
   padding: 50px 18px 50px 30px;
-  background-color: white; }
+  background-color: white;
+  width: 96vw; }
   .section-fonctionnement .container-fonctionnement {
     display: flex;
     align-items: center;
@@ -292,10 +293,6 @@ figure {
       width: 330px; }
 
 @media (min-width: 1024px) {
-  /*body {
-      max-width: 1440px;
-      margin: auto;
-  }*/
   .section-fonctionnement {
     display: flex;
     flex-wrap: wrap;

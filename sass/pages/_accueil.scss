@@ -16,6 +16,7 @@
 .section-fonctionnement {
     padding: 50px 18px 50px 30px;
     background-color: white;
+    width: 96vw;
     .container-fonctionnement {
         display: flex;
         align-items: center;
@@ -152,10 +153,6 @@
 }
 
 @media (min-width: 1024px) {
-    /*body {
-        max-width: 1440px;
-        margin: auto;
-    }*/
     .section-fonctionnement {
         display: flex;
         flex-wrap: wrap;
