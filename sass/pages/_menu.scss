@@ -1,3 +1,7 @@
+$nombre-vignette: 10;
+$anim-dur: 1000ms;
+$anim-delay: $anim-dur / $nombre-vignette;
+
 main {
     display: flex;
     flex-direction: column;
@@ -6,7 +10,7 @@ main {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        width: 90vw;
+        width: 92vw;
         padding-left: 15px;
         padding-right: 15px;
         border-radius: 40px 40px 0px 0px;
@@ -21,27 +25,69 @@ main {
     section {
         margin-top: -20px;
         margin-bottom: 20px;
-        
         .vignette {
             display: flex;
-            flex-wrap: wrap;
-            align-items: center;
+            justify-content: space-between;
+            overflow: hidden;
             background-color: white;
-            width: 84vw;
+            width: 90vw;
             height: auto;
             border-radius: 16px;
-            padding: 10px;
             margin-bottom: 15px;
-            & > h3 {
-                width: 100vw;
-                margin: 0;
+            animation: animation 1000ms ease-in-out;
+            @for $i from 1 through 10 {
+                &--#{$i} {
+                    animation-delay: $anim-delay * $i;
+                }
             }
-            & > div {
+            &:hover > .vignette__premiere-colonne {
+                width: 40vw;
+                
+            }
+            &:hover > .check {
+                transition:all .4s ease-in-out;
+                margin-right: 0;
+                & > i {
+                    transform: rotate(0deg);
+                    transition:all 1000ms ease-in-out;
+                }
+            }
+            &:hover > .vignette__premiere-colonne > h3, p {
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                transition:all .4s ease-in-out forwards;
+            }
+            &__premiere-colonne {
                 display: flex;
-                justify-content: space-between;
-                width: 100vw;
+                flex-direction: column;
+                justify-content: space-around;
+                width: 64vw;
+                padding: 10px;
+                & > h3 {
+                    margin: 0;
+                }
                 & > p {
                     margin: 0;
+                }
+            }
+            &__seconde-colonne {
+                display: flex;
+                align-items: flex-end;
+                padding: 0 15px 10px 0px;
+            }
+            .check {
+                background: $color-tertiaire;
+                color: white;
+                width: 57px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 0px 17px 17px 0px;
+                transition: all .4s ease-in-out;
+                margin-right: -65px;
+                & > i {
+                    transform: rotate(-180deg);
                 }
             }
         }
@@ -54,12 +100,29 @@ main {
         flex-direction: row !important;
         justify-content: space-around;
         flex-wrap: wrap;
-        & > section > div.vignette {
+        & > section > .vignette {
             width: 30vw;
+            & > .vignette__premiere-colonne {
+                width: 26vw;
+            }
         }
         & > .btn.btn--space-menus {
             margin-left: 30vh;
             margin-right: 30vh;
         }
+    }
+}
+
+@keyframes animation {
+    0% {
+        opacity: 0;
+        transform: translateY(25px)
+    }
+    50% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
     }
 }
