@@ -267,12 +267,27 @@ figure {
           margin-bottom: 0px; }
         .section-restaurant__vignette > figcaption > div > p {
           margin-top: 7px; }
-      .section-restaurant__vignette > figcaption .heart {
+      .section-restaurant__vignette > figcaption .far.fa-heart {
         color: black;
         position: absolute;
         top: 30px;
         right: 16px;
-        font-size: 1.7rem; }
+        font-size: 1.7rem;
+        opacity: 1;
+        z-index: 1;
+        background: white; }
+        .section-restaurant__vignette > figcaption .far.fa-heart:hover {
+          opacity: 0; }
+      .section-restaurant__vignette > figcaption .fas.fa-heart {
+        position: absolute;
+        top: 30px;
+        right: 16px;
+        font-size: 1.7rem;
+        opacity: 1;
+        z-index: 0;
+        background: linear-gradient(to bottom, #9256dc 0%, #FF79DA 100%);
+        background-clip: text;
+        -webkit-text-fill-color: transparent; }
     .section-restaurant__vignette img {
       width: 330px; }
 
@@ -302,7 +317,7 @@ main {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 90vw;
+    width: 92vw;
     padding-left: 15px;
     padding-right: 15px;
     border-radius: 40px 40px 0px 0px;
@@ -317,23 +332,73 @@ main {
     margin-bottom: 20px; }
     main section .vignette {
       display: flex;
-      flex-wrap: wrap;
-      align-items: center;
+      justify-content: space-between;
+      overflow: hidden;
       background-color: white;
-      width: 84vw;
+      width: 90vw;
       height: auto;
       border-radius: 16px;
-      padding: 10px;
-      margin-bottom: 15px; }
-      main section .vignette > h3 {
-        width: 100vw;
-        margin: 0; }
-      main section .vignette > div {
+      margin-bottom: 15px;
+      animation: animation 1000ms ease-in-out; }
+      main section .vignette--1 {
+        animation-delay: 100ms; }
+      main section .vignette--2 {
+        animation-delay: 200ms; }
+      main section .vignette--3 {
+        animation-delay: 300ms; }
+      main section .vignette--4 {
+        animation-delay: 400ms; }
+      main section .vignette--5 {
+        animation-delay: 500ms; }
+      main section .vignette--6 {
+        animation-delay: 600ms; }
+      main section .vignette--7 {
+        animation-delay: 700ms; }
+      main section .vignette--8 {
+        animation-delay: 800ms; }
+      main section .vignette--9 {
+        animation-delay: 900ms; }
+      main section .vignette--10 {
+        animation-delay: 1000ms; }
+      main section .vignette:hover > .vignette__premiere-colonne {
+        width: 40vw; }
+      main section .vignette:hover > .check {
+        transition: all .4s ease-in-out;
+        margin-right: 0; }
+        main section .vignette:hover > .check > i {
+          transform: rotate(0deg);
+          transition: all 1000ms ease-in-out; }
+      main section .vignette:hover > .vignette__premiere-colonne > h3, main section .vignette p {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        transition: all .4s ease-in-out forwards; }
+      main section .vignette__premiere-colonne {
         display: flex;
-        justify-content: space-between;
-        width: 100vw; }
-        main section .vignette > div > p {
+        flex-direction: column;
+        justify-content: space-around;
+        width: 64vw;
+        padding: 10px; }
+        main section .vignette__premiere-colonne > h3 {
           margin: 0; }
+        main section .vignette__premiere-colonne > p {
+          margin: 0; }
+      main section .vignette__seconde-colonne {
+        display: flex;
+        align-items: flex-end;
+        padding: 0 15px 10px 0px; }
+      main section .vignette .check {
+        background: #99E2D0;
+        color: white;
+        width: 57px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 0px 17px 17px 0px;
+        transition: all .4s ease-in-out;
+        margin-right: -65px; }
+        main section .vignette .check > i {
+          transform: rotate(-180deg); }
 
 @media (min-width: 1024px) {
   main {
@@ -341,10 +406,21 @@ main {
     flex-direction: row !important;
     justify-content: space-around;
     flex-wrap: wrap; }
-    main > section > div.vignette {
+    main > section > .vignette {
       width: 30vw; }
+      main > section > .vignette > .vignette__premiere-colonne {
+        width: 26vw; }
     main > .btn.btn--space-menus {
       margin-left: 30vh;
       margin-right: 30vh; } }
+@keyframes animation {
+  0% {
+    opacity: 0;
+    transform: translateY(25px); }
+  50% {
+    opacity: 0.5; }
+  100% {
+    opacity: 1;
+    transform: translateY(0); } }
 
 /*# sourceMappingURL=style.css.map */

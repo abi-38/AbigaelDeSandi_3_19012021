@@ -120,12 +120,29 @@
                     margin-top: 7px;
                 }
             }
-            .heart {
+            & .far.fa-heart {
                 color: black;
                 position: absolute;
                 top: 30px;
                 right: 16px;
                 font-size: 1.7rem;
+                opacity: 1;
+                z-index: 1;
+                background: white;
+                &:hover {
+                    opacity: 0;
+                }
+            }
+            & .fas.fa-heart {
+                position: absolute;
+                top: 30px;
+                right: 16px;
+                font-size: 1.7rem;
+                opacity: 1;
+                z-index: 0;
+                background: linear-gradient(to bottom, #9256dc 0%, #FF79DA 100%);
+                background-clip: text;
+                -webkit-text-fill-color: transparent;
             }
         }
         img {
