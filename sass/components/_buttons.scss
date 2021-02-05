@@ -7,9 +7,10 @@
     box-shadow: 0px 5px 10px $color-shadow;
     color: white;
     position: relative;
+    cursor: pointer;
     z-index: 1;
     &--space-menus {
-        margin-bottom: 65px;
+    margin-bottom: 65px;
     }
     &:hover {
         &::after {
