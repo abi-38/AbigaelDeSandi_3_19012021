@@ -6,6 +6,23 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
+    .load {
+        position : fixed;
+        z-index: 9999;
+        background-color: rgba(0, 0, 0, 0.76);
+        top : 0px;
+        left : 0px;
+        height : 100%;
+        width : 100%;
+        animation: background 3s linear forwards;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        & > img {
+            animation: spinner 3s linear forwards;
+            width: 100vw;
+        }
+    }
     .div-titre {
         display: flex;
         justify-content: space-between;
@@ -17,9 +34,29 @@ main {
         position: relative;
         top: -47px;
         background-color: $color-fond;
-        & > span > .far.fa-heart {
-            font-size: 1.6rem;
-            padding-right: 4px;
+        & > .far.fa-heart {
+                color: black;
+                position: absolute;
+                top: 22px;
+                right: 16px;
+                font-size: 1.7rem;
+                opacity: 1;
+                z-index: 1;
+                background: $color-fond;
+            &:hover {
+                opacity: 0;
+            }
+        }
+        & > .fas.fa-heart {
+            position: absolute;
+            top: 22px;
+            right: 16px;
+            font-size: 1.7rem;
+            opacity: 1;
+            z-index: 0;
+            background: linear-gradient(to bottom, #9256dc 0%, #FF79DA 100%);
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
     }
     section {
@@ -35,6 +72,7 @@ main {
             border-radius: 16px;
             margin-bottom: 15px;
             animation: animation 1000ms ease-in-out;
+            box-shadow: 0px 5px 10px $color-shadow;
             @for $i from 1 through 10 {
                 &--#{$i} {
                     animation-delay: $anim-delay * $i;
@@ -100,6 +138,11 @@ main {
         flex-direction: row !important;
         justify-content: space-around;
         flex-wrap: wrap;
+        .load {
+            & > img {
+                width: 20vw;
+            }
+        }
         & > section > .vignette {
             width: 30vw;
             & > .vignette__premiere-colonne {
@@ -121,6 +164,19 @@ main {
             margin-right: 40vh;
         }
     }
+    .section-restaurant {
+        margin-right: 0;
+        &__vignette {
+            width: 40vw;
+            margin-right: 20px;
+            & > figure {
+                width: 40vw;
+            }
+        }
+    }
+    footer {
+        align-items: center;
+    }
 }
 
 @keyframes animation {
@@ -134,5 +190,29 @@ main {
     100% {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+@keyframes background {
+    0% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    90% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateX(1000px);
+    }
+}
+@keyframes spinner {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(380deg);
+        display: none;
     }
 }

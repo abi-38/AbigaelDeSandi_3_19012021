@@ -80,6 +80,7 @@ strong {
   width: 213px;
   height: 49px;
   background: linear-gradient(to bottom right, #FF79DA 0%, #9256dc 100%);
+  box-shadow: 0px 5px 10px #b4b4b4;
   color: white;
   position: relative;
   z-index: 1; }
@@ -98,7 +99,8 @@ strong {
     background-color: #FF79DA;
     opacity: 0;
     position: absolute;
-    z-index: -1; }
+    z-index: -1;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.651); }
 
 .footer {
   height: 195px;
@@ -311,11 +313,29 @@ figure {
   .section-restaurant__vignette {
     width: 45vw; }
     .section-restaurant__vignette > figure {
-      width: 45vw; } }
+      width: 45vw; }
+
+  .footer {
+    align-items: center; } }
 main {
   display: flex;
   flex-direction: column;
   align-items: center; }
+  main .load {
+    position: fixed;
+    z-index: 9999;
+    background-color: rgba(0, 0, 0, 0.76);
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    animation: background 3s linear forwards;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    main .load > img {
+      animation: spinner 3s linear forwards;
+      width: 100vw; }
   main .div-titre {
     display: flex;
     justify-content: space-between;
@@ -327,9 +347,27 @@ main {
     position: relative;
     top: -47px;
     background-color: #eaeaea; }
-    main .div-titre > span > .far.fa-heart {
-      font-size: 1.6rem;
-      padding-right: 4px; }
+    main .div-titre > .far.fa-heart {
+      color: black;
+      position: absolute;
+      top: 22px;
+      right: 16px;
+      font-size: 1.7rem;
+      opacity: 1;
+      z-index: 1;
+      background: #eaeaea; }
+      main .div-titre > .far.fa-heart:hover {
+        opacity: 0; }
+    main .div-titre > .fas.fa-heart {
+      position: absolute;
+      top: 22px;
+      right: 16px;
+      font-size: 1.7rem;
+      opacity: 1;
+      z-index: 0;
+      background: linear-gradient(to bottom, #9256dc 0%, #FF79DA 100%);
+      background-clip: text;
+      -webkit-text-fill-color: transparent; }
   main section {
     margin-top: -20px;
     margin-bottom: 20px; }
@@ -342,7 +380,8 @@ main {
       height: auto;
       border-radius: 16px;
       margin-bottom: 15px;
-      animation: animation 1000ms ease-in-out; }
+      animation: animation 1000ms ease-in-out;
+      box-shadow: 0px 5px 10px #b4b4b4; }
       main section .vignette--1 {
         animation-delay: 100ms; }
       main section .vignette--2 {
@@ -409,6 +448,8 @@ main {
     flex-direction: row !important;
     justify-content: space-around;
     flex-wrap: wrap; }
+    main .load > img {
+      width: 20vw; }
     main > section > .vignette {
       width: 30vw; }
       main > section > .vignette > .vignette__premiere-colonne {
@@ -422,7 +463,18 @@ main {
     margin: auto; }
     main > .btn.btn--space-menus {
       margin-left: 40vh;
-      margin-right: 40vh; } }
+      margin-right: 40vh; }
+
+  .section-restaurant {
+    margin-right: 0; }
+    .section-restaurant__vignette {
+      width: 40vw;
+      margin-right: 20px; }
+      .section-restaurant__vignette > figure {
+        width: 40vw; }
+
+  footer {
+    align-items: center; } }
 @keyframes animation {
   0% {
     opacity: 0;
@@ -432,5 +484,21 @@ main {
   100% {
     opacity: 1;
     transform: translateY(0); } }
+@keyframes background {
+  0% {
+    opacity: 1;
+    transform: translateX(0); }
+  90% {
+    opacity: 1;
+    transform: translateX(0); }
+  100% {
+    opacity: 0;
+    transform: translateX(1000px); } }
+@keyframes spinner {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(380deg);
+    display: none; } }
 
 /*# sourceMappingURL=style.css.map */
