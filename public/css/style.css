@@ -83,6 +83,7 @@ strong {
   box-shadow: 0px 5px 10px #b4b4b4;
   color: white;
   position: relative;
+  cursor: pointer;
   z-index: 1; }
   .btn--space-menus {
     margin-bottom: 65px; }
@@ -263,19 +264,19 @@ figure {
         object-fit: cover;
         position: absolute;
         top: -39px; }
-    .section-restaurant__vignette > figcaption {
+    .section-restaurant__vignette > div {
       display: flex;
       justify-content: left;
       align-items: center;
       padding-left: 15px;
       position: relative; }
-      .section-restaurant__vignette > figcaption > div {
+      .section-restaurant__vignette > div > div {
         color: black; }
-        .section-restaurant__vignette > figcaption > div > h4 {
+        .section-restaurant__vignette > div > div > h4 {
           margin-bottom: 0px; }
-        .section-restaurant__vignette > figcaption > div > p {
+        .section-restaurant__vignette > div > div > p {
           margin-top: 7px; }
-      .section-restaurant__vignette > figcaption .far.fa-heart {
+      .section-restaurant__vignette > div .far.fa-heart {
         color: black;
         position: absolute;
         top: 30px;
@@ -284,9 +285,9 @@ figure {
         opacity: 1;
         z-index: 1;
         background: white; }
-        .section-restaurant__vignette > figcaption .far.fa-heart:hover {
+        .section-restaurant__vignette > div .far.fa-heart:hover {
           opacity: 0; }
-      .section-restaurant__vignette > figcaption .fas.fa-heart {
+      .section-restaurant__vignette > div .fas.fa-heart {
         position: absolute;
         top: 30px;
         right: 16px;
@@ -437,7 +438,7 @@ main {
         display: flex;
         justify-content: center;
         align-items: center;
-        border-radius: 0px 17px 17px 0px;
+        border-radius: 0px 15px 15px 0px;
         transition: all .4s ease-in-out;
         margin-right: -65px; }
         main section .vignette .check > i {
@@ -494,7 +495,7 @@ main {
     transform: translateX(0); }
   100% {
     opacity: 0;
-    transform: translateX(1000px); } }
+    transform: translateX(9000px); } }
 @keyframes spinner {
   0% {
     transform: rotate(0deg); }
