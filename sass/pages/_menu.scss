@@ -17,9 +17,11 @@ main {
         /*ANIMATIONS DES BOUTONS COEURS*/
         & > .far.fa-heart {
             @include heart;
+            top: 22px;
         }
         & > .fas.fa-heart {
             @include heart-full;
+            top: 22px;
         }
     }
     /*SECTONS MENUS ENTREES + PLATS + DESSERTS*/

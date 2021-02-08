@@ -406,7 +406,8 @@ main {
       transition: opacity 500ms ease-in-out;
       z-index: 1;
       background: transparent;
-      /*HOVER*/ }
+      /*HOVER*/
+      top: 22px; }
       main .div-titre > .far.fa-heart:hover {
         opacity: 0; }
         main .div-titre > .far.fa-heart:hover + .fas.fa-heart {
@@ -425,7 +426,8 @@ main {
       transform-origin: center top;
       opacity: 0;
       transform: scaleY(0);
-      transition: all 500ms ease-in-out; }
+      transition: all 500ms ease-in-out;
+      top: 22px; }
   main section {
     margin-top: -20px;
     margin-bottom: 20px;
