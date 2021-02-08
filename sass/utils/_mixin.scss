@@ -1,3 +1,4 @@
+/*COEUR AVANT HOVER*/
 @mixin heart {
     color: black;
     position: absolute;
@@ -8,6 +9,7 @@
     transition: opacity 500ms ease-in-out;
     z-index: 1;
     background: transparent;
+    /*HOVER*/
     &:hover {
         opacity: 0;
         & + .fas.fa-heart {
@@ -17,6 +19,7 @@
     }
 }
 
+/*COEUR AU HOVER + TRANSITION*/
 @mixin heart-full {
     position: absolute;
     top: 30px;
