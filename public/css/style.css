@@ -296,6 +296,7 @@ figure {
         z-index: 0;
         background: linear-gradient(to bottom, #9256dc 0%, #FF79DA 100%);
         background-clip: text;
+        -webkit-background-clip: text;
         -webkit-text-fill-color: transparent; }
     .section-restaurant__vignette img {
       width: 330px; }
