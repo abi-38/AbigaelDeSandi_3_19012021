@@ -1,8 +1,13 @@
+@charset "UTF-8";
+/*VARIABLE COULEURS*/
+/*VARIABLE DUREES ANIMATIONS*/
 body {
   margin: 0;
   background-color: #eaeaea;
   overflow-x: hidden; }
 
+/*COEUR AVANT HOVER*/
+/*COEUR AU HOVER + TRANSITION*/
 body {
   font-family: 'Roboto', sans-serif; }
 
@@ -36,12 +41,6 @@ body {
   font-size: 1rem;
   font-weight: 400; }
 
-/*Typo footer*/
-h5 {
-  font-family: 'Shrikhand', cursive;
-  font-size: 1.125rem;
-  margin: 0; }
-
 /*Typo pages menus*/
 h1 {
   font-family: 'Shrikhand', cursive;
@@ -70,9 +69,16 @@ p {
   font-weight: 100;
   font-size: 0.85rem; }
 
+/*Typo prix*/
 strong {
   font-weight: 700;
   font-size: 0.938rem; }
+
+/*Typo footer*/
+h5 {
+  font-family: 'Shrikhand', cursive;
+  font-size: 1.125rem;
+  margin: 0; }
 
 .btn {
   border-radius: 23px;
@@ -84,7 +90,8 @@ strong {
   color: white;
   position: relative;
   cursor: pointer;
-  z-index: 1; }
+  z-index: 1;
+  /*BOUTON HOVER*/ }
   .btn--space-menus {
     margin-bottom: 65px; }
   .btn:hover::after {
@@ -96,12 +103,12 @@ strong {
     bottom: 0;
     right: 0;
     left: 0;
-    transition: opacity 250ms;
-    background-color: #FF79DA;
+    background-color: #fface8;
     opacity: 0;
+    transition: opacity 250ms;
     position: absolute;
     z-index: -1;
-    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.651); }
+    box-shadow: 0px 5px 10px #020202; }
 
 .footer {
   height: 195px;
@@ -126,13 +133,42 @@ strong {
     font-size: 1rem;
     padding-bottom: 15px; }
 
+@keyframes animation {
+  0% {
+    opacity: 0;
+    transform: translateY(25px); }
+  50% {
+    opacity: 0.5; }
+  100% {
+    opacity: 1;
+    transform: translateY(0); } }
+@keyframes background {
+  0% {
+    opacity: 1;
+    transform: translateX(0); }
+  90% {
+    opacity: 1;
+    transform: translateX(0); }
+  100% {
+    opacity: 0;
+    transform: translateX(9000px); } }
+@keyframes spinner {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(380deg);
+    display: none; } }
+/*2 PREMIERS CONTAINERS*/
 .container-first {
   height: 62px;
   width: 100vw;
   display: flex;
   justify-content: center;
   align-items: center;
-  /*pages des menus*/ }
+  /*DIV LOGO AJOUT SHADOW*/
+  /*CONTAINER LOGO*/
+  /*CONTAINER LOCALISATION*/
+  /*header des pages menus***********************/ }
   .container-first--shadow {
     box-shadow: 0px 0px 5px #b4b4b4;
     background-color: white;
@@ -152,16 +188,7 @@ strong {
       right: 210px;
       color: #353535; }
 
-figure {
-  width: 100vw;
-  height: 250px;
-  overflow: hidden;
-  margin: 0; }
-  figure > img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; }
-
+/*PRESENATION*/
 .container-presentation {
   height: 284px;
   background-color: #f6f6f6;
@@ -175,13 +202,26 @@ figure {
     padding-left: 25px;
     padding-right: 25px; }
 
+/*IMAGES DES MENUS SUR CHAQUE PAGE MENU*/
+figure {
+  width: 100vw;
+  height: 250px;
+  overflow: hidden;
+  margin: 0; }
+  figure > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; }
+
+/*SECTION FONCTIONNEMENT*/
 .section-fonctionnement {
   padding: 50px 18px 50px 30px;
   background-color: white;
   width: 96vw;
   display: flex;
   flex-direction: column;
-  align-items: center; }
+  align-items: center;
+  /*CONTAINERS*/ }
   .section-fonctionnement .container-fonctionnement {
     display: flex;
     align-items: center;
@@ -192,7 +232,10 @@ figure {
     border-radius: 21px;
     box-shadow: 0px 5px 10px #b4b4b4;
     margin-bottom: 20px;
-    position: relative; }
+    position: relative;
+    /*NUMEROS CONTAINERS*/
+    /*ICONES CONTAINERS*/
+    /*PARAGRAPHES CONTAINERS*/ }
     .section-fonctionnement .container-fonctionnement__number {
       width: 24px;
       height: 20px;
@@ -213,12 +256,34 @@ figure {
     .section-fonctionnement .container-fonctionnement__p {
       padding-left: 20px; }
 
+main {
+  /*LOADING SPINNER*/ }
+  main .load {
+    position: fixed;
+    z-index: 9999;
+    background-color: rgba(0, 0, 0, 0.76);
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*ANIMATION DES PLATS*/
+    animation: background 3s linear forwards; }
+    main .load > img {
+      /*ANIMATION DU LOADING SPINNER*/
+      animation: spinner 3s linear forwards;
+      width: 100vw; }
+
+/*SECTION RESTAURANTS*/
 .section-restaurant {
   padding: 50px 20px 50px 20px;
   height: auto;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around; }
+  justify-content: space-around;
+  /*RESTAURANTS*/ }
   .section-restaurant > h2 {
     margin-top: 0;
     text-align: left;
@@ -233,7 +298,9 @@ figure {
     background-color: white;
     box-shadow: 0px 5px 10px #b4b4b4;
     border-radius: 13px;
-    margin-bottom: 10px; }
+    margin-bottom: 10px;
+    /*CADRES IMAGES MENUS*/
+    /*CADRES TEXTES + COEURS DES IMAGES*/ }
     .section-restaurant__vignette > figure {
       display: block;
       width: 300px;
@@ -242,7 +309,9 @@ figure {
       margin: 0;
       border-radius: 13px 13px 0px 0px;
       position: relative;
-      z-index: 1; }
+      z-index: 1;
+      /*BOUTON NOUVEAUTE*/
+      /*IMAGES MENUS*/ }
       .section-restaurant__vignette > figure > .nouveaute {
         background-color: #99E2D0;
         color: #008766;
@@ -269,7 +338,9 @@ figure {
       justify-content: left;
       align-items: center;
       padding-left: 15px;
-      position: relative; }
+      position: relative;
+      /*CADRES TEXTES IMAGES*/
+      /*ANIMATIONS DES BOUTONS COEURS*/ }
       .section-restaurant__vignette > div > div {
         color: black; }
         .section-restaurant__vignette > div > div > h4 {
@@ -283,61 +354,36 @@ figure {
         right: 16px;
         font-size: 1.7rem;
         opacity: 1;
+        transition: opacity 500ms ease-in-out;
         z-index: 1;
-        background: white; }
+        background: transparent;
+        /*HOVER*/ }
         .section-restaurant__vignette > div .far.fa-heart:hover {
           opacity: 0; }
+          .section-restaurant__vignette > div .far.fa-heart:hover + .fas.fa-heart {
+            transform: scaleY(1);
+            opacity: 1; }
       .section-restaurant__vignette > div .fas.fa-heart {
         position: absolute;
         top: 30px;
         right: 16px;
         font-size: 1.7rem;
-        opacity: 1;
         z-index: 0;
         background: linear-gradient(to bottom, #9256dc 0%, #FF79DA 100%);
         background-clip: text;
-        -webkit-text-fill-color: transparent; }
-    .section-restaurant__vignette img {
-      width: 330px; }
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        transform-origin: center top;
+        opacity: 0;
+        transform: scaleY(0);
+        transition: all 500ms ease-in-out; }
 
-@media (min-width: 1024px) {
-  .section-fonctionnement {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-around;
-    width: 100vw; }
-    .section-fonctionnement > h2.h2-accueil {
-      width: 90vw; }
-    .section-fonctionnement > div.container-fonctionnement {
-      width: 29vw; }
-
-  .section-restaurant__vignette {
-    width: 45vw; }
-    .section-restaurant__vignette > figure {
-      width: 45vw; }
-
-  .footer {
-    align-items: center; } }
 main {
   display: flex;
   flex-direction: column;
-  align-items: center; }
-  main .load {
-    position: fixed;
-    z-index: 9999;
-    background-color: rgba(0, 0, 0, 0.76);
-    top: 0px;
-    left: 0px;
-    height: 100%;
-    width: 100%;
-    animation: background 3s linear forwards;
-    display: flex;
-    justify-content: center;
-    align-items: center; }
-    main .load > img {
-      animation: spinner 3s linear forwards;
-      width: 100vw; }
+  align-items: center;
+  /*SECTION TITRE MENU + BOUTON J'AIME*/
+  /*SECTONS MENUS ENTREES + PLATS + DESSERTS*/ }
   main .div-titre {
     display: flex;
     justify-content: space-between;
@@ -348,31 +394,42 @@ main {
     border-radius: 40px 40px 0px 0px;
     position: relative;
     top: -47px;
-    background-color: #eaeaea; }
+    background-color: #eaeaea;
+    /*ANIMATIONS DES BOUTONS COEURS*/ }
     main .div-titre > .far.fa-heart {
       color: black;
       position: absolute;
-      top: 22px;
+      top: 30px;
       right: 16px;
       font-size: 1.7rem;
       opacity: 1;
+      transition: opacity 500ms ease-in-out;
       z-index: 1;
-      background: #eaeaea; }
+      background: transparent;
+      /*HOVER*/ }
       main .div-titre > .far.fa-heart:hover {
         opacity: 0; }
+        main .div-titre > .far.fa-heart:hover + .fas.fa-heart {
+          transform: scaleY(1);
+          opacity: 1; }
     main .div-titre > .fas.fa-heart {
       position: absolute;
-      top: 22px;
+      top: 30px;
       right: 16px;
       font-size: 1.7rem;
-      opacity: 1;
       z-index: 0;
       background: linear-gradient(to bottom, #9256dc 0%, #FF79DA 100%);
       background-clip: text;
-      -webkit-text-fill-color: transparent; }
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      transform-origin: center top;
+      opacity: 0;
+      transform: scaleY(0);
+      transition: all 500ms ease-in-out; }
   main section {
     margin-top: -20px;
-    margin-bottom: 20px; }
+    margin-bottom: 20px;
+    /*VIGNETTES DE CHAQUE PLATS*/ }
     main section .vignette {
       display: flex;
       justify-content: space-between;
@@ -383,7 +440,15 @@ main {
       border-radius: 16px;
       margin-bottom: 15px;
       animation: animation 1000ms ease-in-out;
-      box-shadow: 0px 5px 10px #b4b4b4; }
+      box-shadow: 0px 5px 10px #b4b4b4;
+      /*ANIMATIONS APPARITIONS DES PLATS*/
+      /*1RER COLONNE VIGNETTE (H3 + PARAGRAPHE) AVANT HOVER*/
+      /*2EME COLONNE VIGNETTE PRIX AVANT HOVER*/
+      /*CHECK SANS HOVER*/
+      /*ANIMATIONS DES CHECKS - CHOIX MENUS*/
+      /*Réduction de la largeur de la 1ère colonne pour faire de la place au check*/
+      /*Rognage du H3 + paragraphe avec les 3 points de suspensions*/
+      /*Déplacement du check sur la gauche pour qu'il apparaisse*/ }
       main section .vignette--1 {
         animation-delay: 100ms; }
       main section .vignette--2 {
@@ -404,19 +469,6 @@ main {
         animation-delay: 900ms; }
       main section .vignette--10 {
         animation-delay: 1000ms; }
-      main section .vignette:hover > .vignette__premiere-colonne {
-        width: 40vw; }
-      main section .vignette:hover > .check {
-        transition: all .4s ease-in-out;
-        margin-right: 0; }
-        main section .vignette:hover > .check > i {
-          transform: rotate(0deg);
-          transition: all 1000ms ease-in-out; }
-      main section .vignette:hover > .vignette__premiere-colonne > h3, main section .vignette p {
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        transition: all .4s ease-in-out forwards; }
       main section .vignette__premiere-colonne {
         display: flex;
         flex-direction: column;
@@ -440,11 +492,40 @@ main {
         align-items: center;
         border-radius: 0px 15px 15px 0px;
         transition: all .4s ease-in-out;
-        margin-right: -65px; }
+        transform: translateX(65px); }
         main section .vignette .check > i {
           transform: rotate(-180deg); }
+      main section .vignette:hover > .vignette__premiere-colonne {
+        width: 40vw; }
+      main section .vignette:hover > .vignette__premiere-colonne > h3, main section .vignette p {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis; }
+      main section .vignette:hover > .check {
+        transform: translateX(0);
+        transition: transform .4s ease-in-out;
+        /*Rotation de l'icone check*/ }
+        main section .vignette:hover > .check > i {
+          transform: rotate(0deg);
+          transition: transform 1000ms ease-in-out; }
 
 @media (min-width: 1024px) {
+  .section-fonctionnement {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100vw; }
+    .section-fonctionnement > h2.h2-accueil {
+      width: 90vw; }
+    .section-fonctionnement > div.container-fonctionnement {
+      width: 29vw; }
+
+  .section-restaurant__vignette {
+    width: 45vw; }
+    .section-restaurant__vignette > figure {
+      width: 45vw; }
+
   main {
     display: flex;
     flex-direction: row !important;
@@ -458,7 +539,10 @@ main {
         width: 26vw; }
     main > .btn.btn--space-menus {
       margin-left: 30vh;
-      margin-right: 30vh; } }
+      margin-right: 30vh; }
+
+  .footer {
+    align-items: center; } }
 @media (min-width: 1900px) {
   main {
     max-width: 1400px;
@@ -477,30 +561,5 @@ main {
 
   footer {
     align-items: center; } }
-@keyframes animation {
-  0% {
-    opacity: 0;
-    transform: translateY(25px); }
-  50% {
-    opacity: 0.5; }
-  100% {
-    opacity: 1;
-    transform: translateY(0); } }
-@keyframes background {
-  0% {
-    opacity: 1;
-    transform: translateX(0); }
-  90% {
-    opacity: 1;
-    transform: translateX(0); }
-  100% {
-    opacity: 0;
-    transform: translateX(9000px); } }
-@keyframes spinner {
-  0% {
-    transform: rotate(0deg); }
-  100% {
-    transform: rotate(380deg);
-    display: none; } }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,28 +1,8 @@
-$nombre-vignette: 10;
-$anim-dur: 1000ms;
-$anim-delay: $anim-dur / $nombre-vignette;
-
 main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    .load {
-        position : fixed;
-        z-index: 9999;
-        background-color: rgba(0, 0, 0, 0.76);
-        top : 0px;
-        left : 0px;
-        height : 100%;
-        width : 100%;
-        animation: background 3s linear forwards;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        & > img {
-            animation: spinner 3s linear forwards;
-            width: 100vw;
-        }
-    }
+    /*SECTION TITRE MENU + BOUTON J'AIME*/
     .div-titre {
         display: flex;
         justify-content: space-between;
@@ -34,34 +14,19 @@ main {
         position: relative;
         top: -47px;
         background-color: $color-fond;
+        /*ANIMATIONS DES BOUTONS COEURS*/
         & > .far.fa-heart {
-                color: black;
-                position: absolute;
-                top: 22px;
-                right: 16px;
-                font-size: 1.7rem;
-                opacity: 1;
-                z-index: 1;
-                background: $color-fond;
-            &:hover {
-                opacity: 0;
-            }
+            @include heart;
         }
         & > .fas.fa-heart {
-            position: absolute;
-            top: 22px;
-            right: 16px;
-            font-size: 1.7rem;
-            opacity: 1;
-            z-index: 0;
-            background: linear-gradient(to bottom, #9256dc 0%, #FF79DA 100%);
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
+            @include heart-full;
         }
     }
+    /*SECTONS MENUS ENTREES + PLATS + DESSERTS*/
     section {
         margin-top: -20px;
         margin-bottom: 20px;
+        /*VIGNETTES DE CHAQUE PLATS*/
         .vignette {
             display: flex;
             justify-content: space-between;
@@ -73,29 +38,13 @@ main {
             margin-bottom: 15px;
             animation: animation 1000ms ease-in-out;
             box-shadow: 0px 5px 10px $color-shadow;
+            /*ANIMATIONS APPARITIONS DES PLATS*/
             @for $i from 1 through 10 {
                 &--#{$i} {
                     animation-delay: $anim-delay * $i;
                 }
             }
-            &:hover > .vignette__premiere-colonne {
-                width: 40vw;
-                
-            }
-            &:hover > .check {
-                transition:all .4s ease-in-out;
-                margin-right: 0;
-                & > i {
-                    transform: rotate(0deg);
-                    transition:all 1000ms ease-in-out;
-                }
-            }
-            &:hover > .vignette__premiere-colonne > h3, p {
-                white-space: nowrap;
-                overflow: hidden;
-                text-overflow: ellipsis;
-                transition:all .4s ease-in-out forwards;
-            }
+            /*1RER COLONNE VIGNETTE (H3 + PARAGRAPHE) AVANT HOVER*/
             &__premiere-colonne {
                 display: flex;
                 flex-direction: column;
@@ -109,11 +58,13 @@ main {
                     margin: 0;
                 }
             }
+            /*2EME COLONNE VIGNETTE PRIX AVANT HOVER*/
             &__seconde-colonne {
                 display: flex;
                 align-items: flex-end;
                 padding: 0 15px 10px 0px;
             }
+            /*CHECK SANS HOVER*/
             .check {
                 background: $color-tertiaire;
                 color: white;
@@ -123,96 +74,32 @@ main {
                 align-items: center;
                 border-radius: 0px 15px 15px 0px;
                 transition: all .4s ease-in-out;
-                margin-right: -65px;
+                transform: translateX(65px);
                 & > i {
                     transform: rotate(-180deg);
                 }
             }
-        }
-    }
-}
-
-@media (min-width: 1024px) {
-    main {
-        display: flex;
-        flex-direction: row !important;
-        justify-content: space-around;
-        flex-wrap: wrap;
-        .load {
-            & > img {
-                width: 20vw;
-            }
-        }
-        & > section > .vignette {
-            width: 30vw;
-            & > .vignette__premiere-colonne {
-                width: 26vw;
-            }
-        }
-        & > .btn.btn--space-menus {
-            margin-left: 30vh;
-            margin-right: 30vh;
-        }
-    }
-}
-@media (min-width: 1900px) {
-    main {
-        max-width: 1400px;
-        margin: auto;
-        & > .btn.btn--space-menus {
-            margin-left: 40vh;
-            margin-right: 40vh;
-        }
-    }
-    .section-restaurant {
-        margin-right: 0;
-        &__vignette {
-            width: 40vw;
-            margin-right: 20px;
-            & > figure {
+            /*ANIMATIONS DES CHECKS - CHOIX MENUS*/
+            /*Réduction de la largeur de la 1ère colonne pour faire de la place au check*/
+            &:hover > .vignette__premiere-colonne {
                 width: 40vw;
             }
+            /*Rognage du H3 + paragraphe avec les 3 points de suspensions*/
+            &:hover > .vignette__premiere-colonne > h3, p {
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+            /*Déplacement du check sur la gauche pour qu'il apparaisse*/
+            &:hover > .check {
+                transform: translateX(0);
+                transition: transform .4s ease-in-out;
+                /*Rotation de l'icone check*/
+                & > i {
+                    transform: rotate(0deg);
+                    transition: transform 1000ms ease-in-out;
+                }
+            }
         }
-    }
-    footer {
-        align-items: center;
-    }
-}
-
-@keyframes animation {
-    0% {
-        opacity: 0;
-        transform: translateY(25px)
-    }
-    50% {
-        opacity: 0.5;
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes background {
-    0% {
-        opacity: 1;
-        transform: translateX(0);
-    }
-    90% {
-        opacity: 1;
-        transform: translateX(0);
-    }
-    100% {
-        opacity: 0;
-        transform: translateX(9000px);
-    }
-}
-@keyframes spinner {
-    0% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(380deg);
-        display: none;
     }
 }

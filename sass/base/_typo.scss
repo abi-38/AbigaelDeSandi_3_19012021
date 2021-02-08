@@ -33,13 +33,6 @@ body {
     font-weight: 400;
 }
 
-/*Typo footer*/
-h5 {
-    font-family: 'Shrikhand', cursive;
-    font-size: 1.125rem;
-    margin: 0;
-}
-
 /*Typo pages menus*/
 h1 {
     font-family: 'Shrikhand', cursive;
@@ -69,7 +62,15 @@ p {
     font-weight: 100;
     font-size: 0.85rem;
 }
+/*Typo prix*/
 strong {
     font-weight: 700;
     font-size: 0.938rem;
+}
+
+/*Typo footer*/
+h5 {
+    font-family: 'Shrikhand', cursive;
+    font-size: 1.125rem;
+    margin: 0;
 }

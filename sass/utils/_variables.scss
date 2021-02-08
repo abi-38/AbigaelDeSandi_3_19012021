@@ -1,3 +1,4 @@
+/*VARIABLE COULEURS*/
 $color-primary: #9356DC;
 $color-secondary: #FF79DA;
 $color-tertiaire: #99E2D0;
@@ -9,3 +10,8 @@ $color-gradient-second: #9256dc;
 $color-shadow: #b4b4b4;
 $color-icone: #7e7e7e;
 $color-footer: #353535;
+
+/*VARIABLE DUREES ANIMATIONS*/
+$nombre-vignette: 10;
+$anim-dur: 1000ms;
+$anim-delay: $anim-dur / $nombre-vignette;
