@@ -473,16 +473,19 @@ main {
         display: flex;
         flex-direction: column;
         justify-content: space-around;
-        width: 64vw;
+        width: 142vw;
         padding: 10px; }
         main section .vignette__premiere-colonne > h3 {
-          margin: 0; }
+          margin: 0;
+          padding-bottom: 5px; }
         main section .vignette__premiere-colonne > p {
           margin: 0; }
       main section .vignette__seconde-colonne {
         display: flex;
         align-items: flex-end;
-        padding: 0 15px 10px 0px; }
+        justify-content: right;
+        width: 10vw;
+        padding-bottom: 10px; }
       main section .vignette .check {
         background: #99E2D0;
         color: white;
@@ -491,16 +494,21 @@ main {
         justify-content: center;
         align-items: center;
         border-radius: 0px 15px 15px 0px;
-        transition: all .4s ease-in-out;
-        transform: translateX(65px); }
+        transform: translateX(65px);
+        transition: all .4s ease-in-out; }
         main section .vignette .check > i {
           transform: rotate(-180deg); }
       main section .vignette:hover > .vignette__premiere-colonne {
         width: 40vw; }
-      main section .vignette:hover > .vignette__premiere-colonne > h3, main section .vignette p {
+      main section .vignette:hover > .vignette__premiere-colonne > h3 {
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis; }
+      main section .vignette:hover > .vignette__premiere-colonne > p {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        width: auto; }
       main section .vignette:hover > .check {
         transform: translateX(0);
         transition: transform .4s ease-in-out;
@@ -536,7 +544,9 @@ main {
     main > section > .vignette {
       width: 30vw; }
       main > section > .vignette > .vignette__premiere-colonne {
-        width: 26vw; }
+        width: 46vw; }
+      main > section > .vignette > .vignette__seconde-colonne {
+        margin-right: 10px; }
     main > .btn.btn--space-menus {
       margin-left: 30vh;
       margin-right: 30vh; }

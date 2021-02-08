@@ -31,7 +31,10 @@
         & > section > .vignette {
             width: 30vw;
             & > .vignette__premiere-colonne {
-                width: 26vw;
+                width: 46vw;
+            }
+            & > .vignette__seconde-colonne {
+                margin-right: 10px;
             }
         }
         & > .btn.btn--space-menus {
