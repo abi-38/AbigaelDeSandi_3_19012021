@@ -283,21 +283,28 @@ figure {
         right: 16px;
         font-size: 1.7rem;
         opacity: 1;
+        transition: opacity 500ms ease-in-out;
         z-index: 1;
-        background: white; }
+        background: transparent; }
         .section-restaurant__vignette > div .far.fa-heart:hover {
           opacity: 0; }
+          .section-restaurant__vignette > div .far.fa-heart:hover + .fas.fa-heart {
+            transform: scaleY(1);
+            opacity: 1; }
       .section-restaurant__vignette > div .fas.fa-heart {
         position: absolute;
         top: 30px;
         right: 16px;
         font-size: 1.7rem;
-        opacity: 1;
         z-index: 0;
         background: linear-gradient(to bottom, #9256dc 0%, #FF79DA 100%);
         background-clip: text;
         -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent; }
+        -webkit-text-fill-color: transparent;
+        transform-origin: center top;
+        opacity: 0;
+        transform: scaleY(0);
+        transition: all 500ms ease-in-out; }
     .section-restaurant__vignette img {
       width: 330px; }
 
@@ -353,24 +360,32 @@ main {
     main .div-titre > .far.fa-heart {
       color: black;
       position: absolute;
-      top: 22px;
+      top: 30px;
       right: 16px;
       font-size: 1.7rem;
       opacity: 1;
+      transition: opacity 500ms ease-in-out;
       z-index: 1;
-      background: #eaeaea; }
+      background: transparent; }
       main .div-titre > .far.fa-heart:hover {
         opacity: 0; }
+        main .div-titre > .far.fa-heart:hover + .fas.fa-heart {
+          transform: scaleY(1);
+          opacity: 1; }
     main .div-titre > .fas.fa-heart {
       position: absolute;
-      top: 22px;
+      top: 30px;
       right: 16px;
       font-size: 1.7rem;
-      opacity: 1;
       z-index: 0;
       background: linear-gradient(to bottom, #9256dc 0%, #FF79DA 100%);
       background-clip: text;
-      -webkit-text-fill-color: transparent; }
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      transform-origin: center top;
+      opacity: 0;
+      transform: scaleY(0);
+      transition: all 500ms ease-in-out; }
   main section {
     margin-top: -20px;
     margin-bottom: 20px; }

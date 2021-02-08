@@ -35,28 +35,10 @@ main {
         top: -47px;
         background-color: $color-fond;
         & > .far.fa-heart {
-                color: black;
-                position: absolute;
-                top: 22px;
-                right: 16px;
-                font-size: 1.7rem;
-                opacity: 1;
-                z-index: 1;
-                background: $color-fond;
-            &:hover {
-                opacity: 0;
-            }
+                @include heart;
         }
         & > .fas.fa-heart {
-            position: absolute;
-            top: 22px;
-            right: 16px;
-            font-size: 1.7rem;
-            opacity: 1;
-            z-index: 0;
-            background: linear-gradient(to bottom, #9256dc 0%, #FF79DA 100%);
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
+            @include heart-full;
         }
     }
     section {
