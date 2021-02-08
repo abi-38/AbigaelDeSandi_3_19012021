@@ -49,10 +49,11 @@ main {
                 display: flex;
                 flex-direction: column;
                 justify-content: space-around;
-                width: 64vw;
+                width: 142vw;
                 padding: 10px;
                 & > h3 {
                     margin: 0;
+                    padding-bottom: 5px;
                 }
                 & > p {
                     margin: 0;
@@ -62,7 +63,9 @@ main {
             &__seconde-colonne {
                 display: flex;
                 align-items: flex-end;
-                padding: 0 15px 10px 0px;
+                justify-content: right;
+                width: 10vw;
+                padding-bottom: 10px;
             }
             /*CHECK SANS HOVER*/
             .check {
@@ -73,8 +76,8 @@ main {
                 justify-content: center;
                 align-items: center;
                 border-radius: 0px 15px 15px 0px;
-                transition: all .4s ease-in-out;
                 transform: translateX(65px);
+                transition: all .4s ease-in-out;
                 & > i {
                     transform: rotate(-180deg);
                 }
@@ -85,10 +88,16 @@ main {
                 width: 40vw;
             }
             /*Rognage du H3 + paragraphe avec les 3 points de suspensions*/
-            &:hover > .vignette__premiere-colonne > h3, p {
+            &:hover > .vignette__premiere-colonne > h3 {
                 white-space: nowrap;
                 overflow: hidden;
                 text-overflow: ellipsis;
+            }
+            &:hover > .vignette__premiere-colonne > p {
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                width: auto;
             }
             /*Déplacement du check sur la gauche pour qu'il apparaisse*/
             &:hover > .check {
